@@ -1,0 +1,76 @@
+body {
+    background-color: gray;
+}
+
+h1 {
+    background-image: linear-gradient(to right, red, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.butt {
+    display: block;
+    margin-top: 100px;
+    margin-left: 100px;
+    padding: 20px 40px;
+    color: white;
+    font-size: 15px;
+    background-color: purple;
+    border: 5px solid pink;
+    cursor: pointer;
+
+    transition: all 2s;
+}
+
+.butt:hover {
+    transform: translateY(-30px) scale(1.5) skew(0, 10deg) rotateX(180deg);
+    background-color: pink;
+    color: purple;
+}
+
+.h2-element {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-300px);
+    }
+
+    to {
+        transform: translateX(-50%, -50%);
+    }
+}
+
+@keyframes phaseIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.slideInLeft {
+    animation: slideInLeft 1s ease-in both;
+}
+
+.typing-effect {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 4s steps(400, end);
+}
+  
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
