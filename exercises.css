@@ -1,76 +1,50 @@
 body {
-    background-color: gray;
+    background-color: #020a18;
 }
 
-h1 {
-    background-image: linear-gradient(to right, red, blue);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: inline-block;
-}
-
-.butt {
-    display: block;
-    margin-top: 100px;
-    margin-left: 100px;
-    padding: 20px 40px;
-    color: white;
-    font-size: 15px;
-    background-color: purple;
-    border: 5px solid pink;
-    cursor: pointer;
-
-    transition: all 2s;
-}
-
-.butt:hover {
-    transform: translateY(-30px) scale(1.5) skew(0, 10deg) rotateX(180deg);
-    background-color: pink;
-    color: purple;
-}
-
-.h2-element {
+.circle {
+    border-radius: 50%;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
 }
 
-@keyframes slideInLeft {
-    from {
-        transform: translateX(-300px);
-    }
-
-    to {
-        transform: translateX(-50%, -50%);
-    }
+.circle.outer-circle {
+    width: 220px;
+    height: 220px;
+    border: 2px solid rgb(94, 191, 209);
 }
 
-@keyframes phaseIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
+.circle.outer-inner-circle {
+    width: 180px;
+    height: 180px;
+    border: 2px solid rgb(94, 191, 209);
 }
 
-.slideInLeft {
-    animation: slideInLeft 1s ease-in both;
+.circle.pink-circle {
+    width: 160px;
+    height: 160px;
+    border: 2px solid rgb(224, 89, 112);
 }
 
-.typing-effect {
-    overflow: hidden;
-    white-space: nowrap;
-    animation: typing 4s steps(400, end);
+.circle.orange-circle {
+    width: 130px;
+    height: 130px;
+    border: 2px solid rgb(193, 132, 19);
 }
-  
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
+
+.circle.inner-circle {
+    width: 90px;
+    height: 90px;
+    border: 2px solid rgba(169, 24, 169, 0.219);
+}
+
+.logo {
+    width: 90px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
 }
