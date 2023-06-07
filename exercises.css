@@ -1,50 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;600&display=swap');
+
 body {
     background-color: #020a18;
 }
 
+.orange-orb {
+    width: 30px;
+    height: 30px;
+    background-image: linear-gradient(to top left, orange, rgb(255, 132, 0));
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow:
+        0 0 32px 16px rgb(253, 109, 53, 0.9),
+        0 0 12px 6px rgb(223, 153, 24);
+    z-index: 9999;
+}
+
 .circle {
-    border-radius: 50%;
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.circle.outer-circle {
-    width: 220px;
-    height: 220px;
-    border: 2px solid rgb(94, 191, 209);
-}
-
-.circle.outer-inner-circle {
-    width: 180px;
-    height: 180px;
-    border: 2px solid rgb(94, 191, 209);
-}
-
-.circle.pink-circle {
-    width: 160px;
-    height: 160px;
-    border: 2px solid rgb(224, 89, 112);
-}
-
-.circle.orange-circle {
-    width: 130px;
-    height: 130px;
-    border: 2px solid rgb(193, 132, 19);
-}
-
-.circle.inner-circle {
-    width: 90px;
-    height: 90px;
-    border: 2px solid rgba(169, 24, 169, 0.219);
-}
-
-.logo {
-    width: 90px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    border: 1px solid orange;
     border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes expandCircle {
+    0% {
+        width: 29px;
+        height: 29px;
+        opacity: 1;
+    }
+
+    57% {
+        width: 74px;
+        height: 74px;
+        opacity: 0;
+    }
+
+    100% {
+        width: 60px;
+        height: 60px;
+        opacity: 0;
+    }
+}
+
+.circle.expand-circle {
+    animation-name: expandCircle;
+    animation-duration: 3.5s;
+    animation-iteration-count: infinite;
+}
+
+.orange-text-box {
+    position: relative;
+    width: 305px;
+    height: 145px;
+    background-color: orange;
+    border-radius: 3px;
+    left: 285px;
+    top: 200px;
+    background-image: linear-gradient(to bottom right, orange, rgb(255, 132, 0));
+    transition: opacity 1s ease;
+    opacity: 0;
+}
+
+.orange-heading {
+    position: absolute;
+    font-size: 17px;
+    left: 15px;
+    font-family: Vollkorn;
+    font-weight: bolder;
+}
+
+.orange-text {
+    position: absolute;
+    width: 270px;
+    font-size: 13px;
+    top: 40px;
+    left: 15px;
+    font-family: Vollkorn;
+}
+
+.connecting-line-1 {
+    position: absolute;
+    right: -30px;
+    top: 60%;
+    width: 30px;
+    height: 1px;
+    background-color: rgba(255, 166, 0, 0.868);
+}
+
+.connecting-line-2 {
+    position: absolute;
+    right: -93px;
+    top: 120px;
+    width: 80px;
+    height: 1px;
+    background-color: rgba(255, 166, 0, 0.868);
+    transform: rotate(55deg);
+}
+
+.connecting-line-3 {
+    position: absolute;
+    right: -108px;
+    top: 153px;
+    width: 32px;
+    height: 1px;
+    background-color: rgba(255, 166, 0, 0.868);
+}
+
+.orange-text-box:hover {
+    cursor: default;
 }
